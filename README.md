@@ -1,129 +1,162 @@
- The 12th Man — Interactive Simulation
-> *"Equality is achieved when opportunities are based on ability and effort rather than assumptions."*
-An interactive educational simulation based on the storyboard "The 12th Man" — a cricket team selection scenario that explores the concepts of Equality, Prejudice, Discrimination, and their real-world consequences.
+<div align="center">
+
+#  The 12th Man
+
+### An Interactive Simulation on Equality, Prejudice & Discrimination
+
+
+
+</div>
+
 ---
- About the Project
-The 12th Man is a browser-based simulation designed to help users understand how bias and prejudice can affect decision-making — even in seemingly merit-based processes like sports team selection. Players step into the roles of selectors, players, and coaches, experiencing the ripple effects of fair and unfair choices.
-The simulation is built around a 5-scene narrative arc derived from the original storyboard:
-Scene	Theme	Description
-1	Equality	Every player enters trials expecting to be judged fairly on ability
-2	Prejudice	Personal assumptions begin to influence the selection discussion
-3	Discrimination	A strong performer is excluded from the squad without merit-based justification
-4	Consequences	The team suffers — the excluded player's skills are exactly what was needed
-5	Equality Restored	Selections are reformed to be based solely on performance and trial results
+
+##  Overview:
+
+**The 12th Man** is a browser-based interactive simulation built around a cricket team selection story. It walks users through how **prejudice** and **discrimination** creep into decision-making — and what it takes to restore **equality**.
+
+> *"Prejudice creates unfair assumptions. Discrimination creates unequal opportunities. Equality ensures everyone is judged by their abilities and efforts."*
+
 ---
- Learning Objectives
-By engaging with this simulation, users will:
-Understand the difference between prejudice (an unfair assumption) and discrimination (an unfair action)
-See how bias-driven decisions harm both individuals and teams/organisations
-Recognise what true equality of opportunity looks like in practice
-Reflect on their own decision-making through interactive choices
+
+##  Story Architechture:
+
+The simulation is structured across **5 scenes**, each representing a key concept:
+
+| # | Scene | Core Concept | What Happens |
+|---|-------|--------------|--------------|
+| 1 | **Equality** | Fair Start | Every player enters trials expecting to be judged on ability |
+| 2 | **Prejudice** | Bias Enters | Personal assumptions begin to influence the selection discussion |
+| 3 | **Discrimination** | Unfair Exclusion | A strong performer is left out of the squad despite good trial results |
+| 4 | **Consequences** | The Cost of Bias | The team struggles — the excluded player's skills were exactly what was needed |
+| 5 | **Equality Restored** | Reform | Selections are moved to a performance-only, data-driven process |
+
 ---
- Project Structure
+
+##  Learning Objectives:
+
+By the end of this simulation, users will be able to:
+
+- Distinguish between **prejudice** (unfair assumption) and **discrimination** (unfair action)
+- Understand how bias harms both **individuals** and **teams**
+- Recognise what **genuine equality of opportunity** looks like
+- Reflect on their own decision-making through interactive choices
+
+---
+
+##  Project Structure:
+
 ```
 the-12th-man/
 │
-├── index.html              # Entry point / landing page
-├── README.md               # Project documentation (this file)
+├── index.html                  # Landing page
+├── README.md                   # Project documentation
+├── storyboard.jpeg             # Original storyboard reference
 │
-├── /scenes                 # Individual simulation scenes
+├── scenes/
 │   ├── scene1-equality.html
 │   ├── scene2-prejudice.html
 │   ├── scene3-discrimination.html
 │   ├── scene4-consequences.html
 │   └── scene5-restored.html
 │
-├── /assets
-│   ├── /images             # Storyboard panels, character illustrations
-│   ├── /audio              # (Optional) Narration or ambient sound
-│   └── /storyboard         # Original storyboard reference images
+├── assets/
+│   ├── images/                 # Character and scene illustrations
+│   └── audio/                  # Narration / ambient sound (optional)
 │
-├── /js
-│   ├── simulation.js       # Core simulation logic and state management
-│   ├── choices.js          # Decision-tree and branching logic
-│   └── scoring.js          # Fairness/bias score tracker
+├── js/
+│   ├── simulation.js           # Core simulation logic
+│   ├── choices.js              # Decision tree and branching
+│   └── scoring.js              # Fairness score tracker
 │
-├── /css
-│   ├── main.css            # Global styles
-│   └── scenes.css          # Scene-specific layout and animations
+├── css/
+│   ├── main.css                # Global styles
+│   └── scenes.css              # Scene-specific layout
 │
-└── /data
-    └── dialogue.json       # All character dialogue and choice options
+└── data/
+    └── dialogue.json           # All character dialogue and choices
 ```
+
 ---
- Getting Started
-Prerequisites
-A modern web browser (Chrome, Firefox, Edge, Safari)
-No installation required for the browser version
-(Optional) Node.js v18+ if running a local dev server
-Running Locally
+
+## Getting Started:
+
+### Prerequisites
+- Any modern browser — Chrome, Firefox, Edge, Safari
+- No installation needed for the browser version
+- Node.js v18+ *(optional, for local dev server)*
+
+### Run Locally
+
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/your-username/the-12th-man.git
 
-# Navigate into the project
+# 2. Move into the project folder
 cd the-12th-man
 
-# Option 1: Open directly in browser
+# 3a. Open directly in browser
 open index.html
 
-# Option 2: Serve with a local server (recommended)
+# 3b. OR serve with a local server
 npx serve .
-# or
-python -m http.server 8000
+# then visit http://localhost:3000
 ```
-Then visit `http://localhost:8000` in your browser.
+
 ---
- How the Simulation Works
-Choose your role — Play as the Head Selector, the New Player, or observe as a neutral Coach.
-Navigate each scene — Read dialogue, observe situations, and make decisions at key branching points.
-See the impact — Your choices affect team morale, performance outcomes, and a Fairness Score.
-Reflect at the end — A debrief summarises what happened and maps it to real-world concepts of equality and discrimination.
-Key Concepts Modelled
-Prejudice creates unfair assumptions — shown in Scene 2 when selectors let familiarity override merit.
-Discrimination creates unequal opportunities — shown in Scene 3 when a qualified player is excluded.
-Equality ensures everyone is judged by ability and effort — achieved in Scene 5 through policy reform.
+
+##  How It Works
+
+1. **Pick a role** — Play as the Head Selector, the New Player, or observe as the Coach
+2. **Work through each scene** — Read dialogue and make decisions at key branching points
+3. **Watch the impact** — Your choices affect team performance and a live **Fairness Score**
+4. **Debrief at the end** — A summary maps your decisions to real-world concepts of equality and discrimination
+
 ---
- Tech Stack
-Layer	Technology
-Structure	HTML5
-Styling	CSS3 / Tailwind CSS
-Logic	Vanilla JavaScript / React (TBD)
-Dialogue Data	JSON
-Hosting	GitHub Pages (planned)
+
+##  Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Structure | HTML5 |
+| Styling | CSS3 |
+| Logic | JavaScript (ES6+) |
+| Data | JSON |
+| Hosting | GitHub Pages *(planned)* |
+
 ---
- Storyboard Reference
-The simulation is directly adapted from the following storyboard panels:
-![The 12th Man Storyboard](storyboard.jpeg)
-The five panels serve as the scene design blueprint for each stage of the simulation.
+
+##  Roadmap
+
+- [x] Storyboard finalised
+- [x] README and project structure defined
+- [ ] Scene layouts (HTML/CSS)
+- [ ] Dialogue JSON populated
+- [ ] Decision branching logic
+- [ ] Fairness Score system
+- [ ] Mobile responsiveness
+- [ ] Accessibility (ARIA, keyboard nav)
+- [ ] GitHub Pages deployment
+- [ ] Facilitator/teacher guide
+
 ---
- Contributing
-Contributions are welcome! If you'd like to improve the simulation, add new scenarios, or translate it:
-Fork the repository
-Create a feature branch: `git checkout -b feature/your-feature-name`
-Commit your changes: `git commit -m "Add: description of change"`
-Push to your branch: `git push origin feature/your-feature-name`
-Open a Pull Request
-Please follow the Code of Conduct in all interactions.
+
+##  Contributing
+
+1. Fork the repository
+2. Create your branch: `git checkout -b feature/your-feature`
+3. Commit changes: `git commit -m "Add: your description"`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request
+
 ---
- Roadmap
-[x] Storyboard finalised
-[x] README and project structure defined
-[ ] Scene 1–5 HTML/CSS layout
-[ ] Dialogue JSON populated
-[ ] Decision branching logic
-[ ] Fairness Score system
-[ ] Mobile responsiveness
-[ ] Accessibility (ARIA labels, keyboard navigation)
-[ ] GitHub Pages deployment
-[ ] Teacher/facilitator guide PDF
+
+##  License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ---
- License
-This project is licensed under the MIT License.
----
- Author
-Created as part of an educational design project.  
-Inspired by real-world issues of fairness, inclusion, and equal opportunity in sports and beyond.
----
-> *"Prejudice creates unfair assumptions. Discrimination creates unequal opportunities. Equality ensures everyone is judged by their abilities and efforts."*  
-> — The 12th Man
+
+<div align="center">
+Made with ❤️ for inclusive education
+</div>
+
