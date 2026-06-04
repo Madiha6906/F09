@@ -157,6 +157,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-Made with ❤️ for inclusive education
+Work under progress..
 </div>
 
